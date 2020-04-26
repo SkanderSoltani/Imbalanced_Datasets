@@ -1,5 +1,5 @@
 ## Introduction
-![](images/Memory.jpg)
+![](images/sample_data.PNG)
 
 ### Markdown
 
