@@ -17,7 +17,15 @@ The datasets contains transactions made by credit cards in September 2013 by eur
 
 It contains only numerical input variables which are the result of a PCA transformation. Unfortunately, due to confidentiality issues, we cannot provide the original features and more background information about the data. Features V1, V2, ... V28 are the principal components obtained with PCA, the only features which have not been transformed with PCA are 'Time' and 'Amount'. Feature 'Time' contains the seconds elapsed between each transaction and the first transaction in the dataset. The feature 'Amount' is the transaction Amount, this feature can be used for example-dependant cost-senstive learning. Feature 'Class' is the response variable and it takes value 1 in case of fraud and 0 otherwise.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Challenges: 
+
+### Imbalanced data challenge:
+The challenges faced with the credit card transactions data set is that fraudulent transactions represent only 0.172% of the total number of transactions. The ask is to find a classifier model that improves the identification of the minority class as opposed to achieving higher overall accuracy.  
+
+### The challenges of using conventional ML techniques:
+1)  The standard performance measures such as accuracy or even the Area Under the Curve (AUC) do not provide an accurate performance measure when faced with imbalanced data sets. You can find more information on different performance measures here:https://en.wikipedia.org/wiki/Precision_and_recall 
+
+2) Conventional regression based classifiers such as Neural Network, Logistic Regression, etc. with a traditional Logit cost function of the form: $Cost = -\frac{1}{m} \sum_{i=1}^{m}(y^ilog(h_{\theta(x^i)}+(1-y^i)log(1-h_{\theta}(x^i)) + \lambda * L_{PenaltyTerm}$   are biased towards the majority class that has the larger number of instances. These algorithms tend to predict accurately only focus on the majority class data, while all the features of the minority classes are often treated as noise. Hence, there is high probability of misclassifying the minority class (Predicting that a transaction is not fraudulent when in fact it is) which can result to hefty cost to the bank or credit card company. For more information on the dynamics underlying the logistic cost function LOGIT, you can watch the following video by Professor Andrew Ng:https://www.youtube.com/watch?v=SHEPb1JHw5o 
 
 ```markdown
 Syntax highlighted code block
