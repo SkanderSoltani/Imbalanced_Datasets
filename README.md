@@ -27,7 +27,7 @@ The challenges faced with the credit card transactions data set is that fraudule
 
 2) Conventional regression based classifiers such as Neural Network, Logistic Regression, etc. with a traditional Logit cost function of the form: $Cost = -\frac{1}{m} \sum_{i=1}^{m}(y^ilog(h_{\theta(x^i)}+(1-y^i)log(1-h_{\theta}(x^i)) + \lambda * L_{PenaltyTerm}$   are biased towards the majority class that has the larger number of instances. These algorithms tend to predict accurately only focus on the majority class data, while all the features of the minority classes are often treated as noise. Hence, there is high probability of misclassifying the minority class (Predicting that a transaction is not fraudulent when in fact it is) which can result to hefty cost to the bank or credit card company. For more information on the dynamics underlying the logistic cost function LOGIT, you can watch the following video by Professor Andrew Ng:https://www.youtube.com/watch?v=SHEPb1JHw5o 
 
-<img src="https://render.githubusercontent.com/render/math?math=Cost = -\frac{1}{m} \sum_{i=1}^{m}(y^ilog(h_{\theta(x^i)}+(1-y^i)log(1-h_{\theta}(x^i)) + \lambda * L_{PenaltyTerm}">
+<img src="https://render.githubusercontent.com/render/math?math=Cost = -\frac{1}{m} \sum_{i=1}^{m}(y^ilog(h_{\theta(x^i)}+(1-y^i)log(1-h_{\theta}(x^i))+\lambda * L_{PenaltyTerm}">
 ```markdown
 Syntax highlighted code block
 
